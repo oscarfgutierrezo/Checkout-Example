@@ -64,7 +64,7 @@
                 </div>
                 <div class="cart__promo">
                     <form class="cart__promo-container">
-                        <input type="text" placeholder="Promo code">
+                        <input class="blue-focus" type="text" placeholder="Promo code">
                         <button type="submit">Redeem</button>
                     </form>
                 </div>
@@ -74,99 +74,98 @@
                 <div class="form__address-container">
                     <div class="form__address-input form__address-input--50">
                         <label for="firstname">First name</label>
-                        <input type="text" id="firstname">
+                        <input class="blue-focus" type="text" id="firstname">
                     </div>
                     <div class="form__address-input form__address-input--50">
                         <label for="lastname">Last name</label>
-                        <input type="text" id="lastname">
+                        <input class="blue-focus" type="text" id="lastname">
                     </div>
                     <div class="form__address-input form__address-input--100">
                         <label for="username">Username
                         </label>
                         <div class="form__address-input-group">
                             <span>@</span>
-                            <input type="text" id="username" placeholder="Username">
+                            <input class="blue-focus" type="text" id="username" placeholder="Username">
                         </div>
                     </div>
                     <div class="form__address-input form__address-input--100">
                         <label for="email">Email <span>(Opcional)</span></label>
-                        <input type="text" id="email" placeholder="you@example.com">
+                        <input class="blue-focus" type="text" id="email" placeholder="you@example.com">
                     </div>
                     <div class="form__address-input form__address-input--100">
                         <label for="address">Address</label>
-                        <input type="text" id="address" placeholder="1234 Main st">
+                        <input class="blue-focus" type="text" id="address" placeholder="1234 Main st">
                     </div>
                     <div class="form__address-input form__address-input--100">
                         <label for="address-2">Address 2 <span>(Optional)</span></label>
-                        <input type="text" id="address-2" placeholder="Apartment or suite">
+                        <input class="blue-focus" type="text" id="address-2" placeholder="Apartment or suite">
                     </div>
                     <div class="form__address-input form__address-input--40">
                         <label for="country">Country</label>
-                        <select name="" id="country">
+                        <select class="blue-focus" name="" id="country">
                             <option value="">Choose...</option>
                             <option value="">Estados Unidos</option>
                         </select>
                     </div>
                     <div class="form__address-input form__address-input--33">
                         <label for="state">State</label>
-                        <select name="" id="state">
+                        <select class="blue-focus" name="" id="state">
                             <option value="">Choose...</option>
                             <option value="">California</option>
                         </select>
                     </div>
                     <div class="form__address-input form__address-input--25">
                         <label for="zip">Zip</label>
-                        <input type="text" id="zip">
+                        <input class="blue-focus" type="text" id="zip">
                     </div>
                 </div>
                 <div class="form__info-check">
-                    <div class="form__info-check-container">
-                        <input type="checkbox" id="same-address">
-                        <label for="same-address">Shipping address is the same as my billing address
-                        </label>
-                    </div>
-                    <div class="form__info-check-container">
+                    <label class="form__info-check-container" for="same-info">Shipping address is the same as my billing address
+                        <input type="checkbox" id="same-info">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="form__info-check-container" for="save-info">Save this information for next time    
                         <input type="checkbox" id="save-info">
-                        <label for="save-info">Save this information for next time</label>
-                    </div>
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
                 <h2>Payment</h2>
                 <div class="form__payment-check">
-                    <div class="form__payment-check-container">
-                        <input type="radio" name="paymentMethod" id="same-address">
-                        <label for="same-address" >Credit card</label>
-                    </div>
-                    <div class="form__payment-check-container">
-                        <input type="radio" name="paymentMethod" id="same-address">
-                        <label for="same-address">Debit card</label>
-                    </div>
-                    <div class="form__payment-check-container">
-                        <input type="radio" name="paymentMethod" id="same-address">
-                        <label for="same-address">PayPal</label>
-                    </div>
+                    <label class="form__payment-check-container" for="pay-credit">Credit card
+                        <input type="radio" name="paymentMethod" id="pay-credit">
+                        <span class="checkradio"></span>
+                    </label>
+                    <label class="form__payment-check-container" for="pay-debit">Debit card
+                        <input type="radio" name="paymentMethod" id="pay-debit">
+                        <span class="checkradio"></span>
+                    </label>
+                    <label class="form__payment-check-container" for="pay-paypal">PayPal
+                        <input type="radio" name="paymentMethod" id="pay-paypal">
+                        <span class="checkradio"></span>
+                    </label>
                 </div>
                 <div class="form__payment-dates">
                     <div class="form__payment-dates-input form__address-input--50">
                         <label for="namecard">Name on card</label>
-                        <input type="text" id="namecard">
+                        <input class="blue-focus" type="text" id="namecard">
                         <span>Full name as displayed on card
                         </span>
                     </div>
                     <div class="form__payment-dates-input form__address-input--50">
                         <label for="cardnumber">Credit card number</label>
-                        <input type="text" id="cardnumber">
+                        <input class="blue-focus" type="text" id="cardnumber">
                     </div>
                     <div class="form__payment-dates-input form__address-input--25">
                         <label for="cardexpiration">Expiration</label>
-                        <input type="text" id="cardexpiration">
+                        <input class="blue-focus" type="text" id="cardexpiration">
                     </div>
                     <div class="form__payment-dates-input form__address-input--25">
                         <label for="cardccv">CVV</label>
-                        <input type="text" id="cardccv">
+                        <input class="blue-focus" type="text" id="cardccv">
                     </div>
                 </div>
                 <div class="form__checkout-button">
-                    <button>Continue to checkout</button>
+                    <button class="blue-focus">Continue to checkout</button>
                 </div>
             </form>
         </div>

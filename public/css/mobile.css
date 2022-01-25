@@ -191,6 +191,12 @@ body {
     border: 0.1rem solid rgba(0,0,0,.125);
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.cart__promo-container button:hover {
+    background-color: #5c636a;
+    border-color: #565e64;
 }
 
 .form__container {
@@ -242,6 +248,7 @@ body {
     padding: 0.6rem 3.6rem 0.6rem 1.2rem;
     height: 3.8rem;
     font-size: 1.6rem;
+    background-color: #fff;
     border: 0.1rem solid rgba(0,0,0,.125);
     border-radius: 0.4rem;
 }
@@ -266,8 +273,8 @@ body {
     border-bottom-left-radius: 0rem;
 }
 
-.form__info-check, .form-payment {
-    margin-top: 00.8rem;
+.form__info-check {
+    margin-top: 0.8rem;
     margin-bottom: 2.4rem;
     padding: 2.4rem 0;
     border-bottom: 0.1rem solid rgba(0,0,0,.125);
@@ -275,13 +282,58 @@ body {
 }
 
 .form__info-check-container {
-    display: flex;
-    gap: 0.8rem;
+    display: block;
+    position: relative;
+    padding-left: 2.3rem;
     font-size: 1.6rem;
 }
 
 .form__info-check-container input {
-    margin-top: 0.6rem;
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.form__info-check-container .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 0.1rem solid #ced4da;
+    border-radius: 0.4rem;
+    background-color: white;
+}
+
+.form__info-check-container .checkmark::after{
+    content: "";
+    display: none;
+}
+
+.form__info-check-container input:checked ~ .checkmark {
+    background-color: var(--main-blue);
+    border: 0.1rem solid var(--main-blue);
+}
+
+.form__info-check-container input:checked ~ .checkmark::after {
+    display: block;
+    position: relative;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 9px;
+    height: 4px;
+    transform: rotate(-45deg);
+    border-left: solid white 2px;
+    border-bottom: solid white 2px;
+}
+
+.form__info-check-container input:focus ~ .checkmark{
+    box-shadow: 0 0 0 0.3rem rgba(13, 109, 253, 0.35);
 }
 
 .form__payment-check {
@@ -289,13 +341,57 @@ body {
 }
 
 .form__payment-check-container {
-    display: flex;
-    gap: 0.8rem;
+    display: block;
+    position: relative;
+    padding-left: 2.3rem;
     font-size: 1.6rem;
 }
 
 .form__payment-check-container input {
-    margin-top: 0.6rem;
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.form__payment-check-container .checkradio {
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 0.1rem solid #ced4da;
+    border-radius: 0.9rem;
+    background-color: white;
+}
+
+.form__payment-check-container .checkradio::after{
+    content: "";
+    display: none;
+}
+
+.form__payment-check-container input:checked ~ .checkradio {
+    background-color: var(--main-blue);
+    border: 0.1rem solid var(--main-blue);
+}
+
+.form__payment-check-container input:checked ~ .checkradio::after {
+    position: relative;
+    display: block;
+    left: 0.4rem;
+    top: 0.4rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.form__payment-check-container input:focus ~ .checkradio {
+    box-shadow: 0 0 0 0.3rem rgba(13, 109, 253, 0.35);
 }
 
 .form__payment-dates {
@@ -340,10 +436,16 @@ body {
     padding: 0.8rem 1.6rem;
     width: 100%;
     font-size: 2rem;
-    border: 1px solid #0d6efd;
+    border: 1px solid var(--main-blue);
     border-radius: 0.5rem;
     color: #fff;
     background-color: var(--main-blue);
+    cursor: pointer;
+}
+
+.form__checkout-button button:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
 }
 
 .footer__container {
@@ -375,7 +477,11 @@ body {
     color: var(--main-blue);
 }
 
-
+.blue-focus:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.3rem rgba(13, 109, 253, 0.25);
+    outline: 0;
+}
 
 
 
